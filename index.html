@@ -3,138 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSP | Filthy Seduction Productions - The Gold Standard</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+    <title>vestopresto.com | The Adult Industry Casting Couch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rose-gold: #b76e79;
+            --midnight: #0a0a0a;
+            --white: #ffffff;
+            --gold-accent: #d4af37;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--midnight);
+            color: var(--white);
+        }
+
+        /* 2026 Age Gate Overlay */
+        #age-gate {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--midnight);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .age-box {
+            border: 1px solid var(--rose-gold);
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--rose-gold);
+            text-transform: lowercase;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            padding: 120px 50px;
+            text-align: center;
+            background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=2070') center/cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero span { color: var(--gold-accent); }
+
+        .form-section {
+            padding: 80px 50px;
+            background: #111;
+            display: flex;
+            justify-content: center;
+        }
+
+        .onboarding-form {
+            background: var(--midnight);
+            padding: 40px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #222;
+        }
+
+        .onboarding-form h2 { color: var(--rose-gold); text-align: center; }
+
+        input, select {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .cta-btn {
+            background: var(--rose-gold);
+            color: white;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover { background: var(--gold-accent); color: black; }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="fsp-nav">
-        <div class="logo-box">
-            <img src="VEXILLIALSDP_FSP.png" alt="FSP Logo" class="live-logo">
-        </div>
-        <div class="nav-actions">
-            <span class="status-pulse"></span> RECRUITING ACTIVE
-            <a href="#login" class="nav-link">DASHBOARD</a>
-            <a href="#intake" class="btn-cta-nav">APPLY NOW</a>
-        </div>
+<div id="age-gate">
+    <div class="age-box">
+        <h1 style="color:var(--rose-gold)">vestopresto.com</h1>
+        <p>ADULT ENTERTAINMENT INDUSTRY ONLY</p>
+        <p>You must be 21+ to enter the Casting Command Center.</p>
+        <button class="cta-btn" onclick="document.getElementById('age-gate').style.display='none'">I AM 21+ AND AGREE</button>
+        <p style="margin-top:20px; font-size:0.7rem;">By entering, you agree to our 2257 Compliance terms.</p>
+    </div>
+</div>
+
+<header>
+    <div class="logo">vestopresto.com</div>
+    <nav style="font-size:0.9rem; font-weight:bold;">
+        <span style="margin-left:20px;">CASTING</span>
+        <span style="margin-left:20px;">COMP CARDS</span>
+        <span style="margin-left:20px; color:var(--gold-accent);">TIER 4 ELITE</span>
     </nav>
+</header>
 
-    <header class="hero-vault">
-        <div class="video-overlay"></div>
-        <div class="hero-inner">
-            <h1 class="glitch-text">FSP <span class="fire-glow">DIRECTORATE</span></h1>
-            <p class="sub-hero">We don't just film. We architect icons. $100/hr Base Rate. 100% Secure. Zero Judgment.</p>
-            <div class="hero-btns">
-                <a href="#earnings" class="btn-outline">VIEW PAY SCALE</a>
-                <a href="#intake" class="btn-fire">START YOUR EVOLUTION</a>
-            </div>
-        </div>
-    </header>
+<section class="hero">
+    <h1>The <span>Casting Couch</span> Reimagined.</h1>
+    <p>Providing the tools, direction, and placement to make you the next big thing.</p>
+</section>
 
-    <section id="earnings" class="pay-system">
-        <div class="container">
-            <h2 class="section-title">THE REVENUE ENGINE</h2>
-            <p class="center-text">Your time is elite. We pay accordingly.</p>
+<section class="form-section">
+    <div class="onboarding-form">
+        <h2>Tier 1: Talent Onboarding</h2>
+        <p style="text-align:center; font-size:0.9rem; margin-bottom:30px;">Identity Verification & Career Readiness Starts Here.</p>
+        
+        <form id="talentForm">
+            <input type="text" placeholder="Legal Name (for 2257 Records)" required>
+            <input type="email" placeholder="Email (Talent Account Login)" required>
             
-            <div class="pay-grid">
-                <div class="pay-card">
-                    <h3>PER MINUTE</h3>
-                    <p class="price">$1.66</p>
-                    <span>Micro-Cues</span>
-                </div>
-                <div class="pay-card featured">
-                    <h3>PER HOUR</h3>
-                    <p class="price">$100.00</p>
-                    <span>Scripted Feature</span>
-                </div>
-                <div class="pay-card">
-                    <h3>HALF HOUR</h3>
-                    <p class="price">$50.00</p>
-                    <span>Standard Block</span>
-                </div>
-            </div>
-            <p class="bonus-text">*Extra submissions = Faster Icon Status promotion.</p>
-        </div>
-    </section>
+            <select required>
+                <option value="">Select Gender Category</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">All Genders / Non-Binary</option>
+            </select>
 
-    <section class="tier-vault">
-        <div class="container">
-            <h2 class="section-title">MEMBERSHIP TIERS</h2>
-            <div class="tier-grid">
-                <div class="tier-card">
-                    <div class="tier-header">BASIC</div>
-                    <ul class="tier-list">
-                        <li>5 Productions in Year 1</li>
-                        <li>Standard Classification</li>
-                        <li>$100/hr Base Rate</li>
-                        <li>Secure Talent Profile</li>
-                    </ul>
-                    <div class="tier-price">FREE</div>
-                </div>
-                <div class="tier-card gold-border">
-                    <div class="tier-header">ELITE STAR</div>
-                    <ul class="tier-list">
-                        <li>Expedited Casting</li>
-                        <li>Branding Agent</li>
-                        <li>Live Remote Cues</li>
-                        <li>Priority Secure Shoots</li>
-                    </ul>
-                    <div class="tier-price">$99.99<span>/mo</span></div>
-                </div>
-                <div class="tier-card fire-border">
-                    <div class="tier-header">ICON STATUS</div>
-                    <ul class="tier-list">
-                        <li>Total Creative Control</li>
-                        <li>Custom Scripting</li>
-                        <li>24/7 Producer Access</li>
-                        <li>Top Portal Placement</li>
-                    </ul>
-                    <div class="tier-price">$199.99<span>/mo</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <input type="text" placeholder="Interested In: (Casting, Comp Cards, Direction)" required>
+            
+            <p style="font-size:0.7rem; color:#888; margin-top:20px;">
+                *By submitting, you agree to identity verification via government-issued ID as per Federal 2257 Record-Keeping requirements.
+            </p>
 
-    <section id="intake" class="casting-call">
-        <div class="container">
-            <div class="form-container">
-                <h2>INTAKE REQUIREMENTS</h2>
-                <p>Complete your profile. Our production staff will review within 24 hours.</p>
-                
-                <form class="fsp-form">
-                    <div class="row">
-                        <input type="text" placeholder="LEGAL FIRST NAME" required>
-                        <input type="text" placeholder="LEGAL LAST NAME" required>
-                    </div>
-                    <div class="row">
-                        <input type="text" placeholder="STAGE NAME (OPTIONAL)">
-                        <input type="email" placeholder="SECURE EMAIL" required>
-                    </div>
+            <button type="submit" class="cta-btn">GET STARTED AS A PERFORMER</button>
+        </form>
+    </div>
+</section>
 
-                    <h3>MANDATORY VISUALS (5 PHOTOS)</h3>
-                    <div class="photo-inputs">
-                        <label>Face <input type="file" required></label>
-                        <label>Upper Front <input type="file" required></label>
-                        <label>Upper Back <input type="file" required></label>
-                        <label>Lower Front <input type="file" required></label>
-                        <label>Lower Back <input type="file" required></label>
-                    </div>
-
-                    <h3>THE INTRO REEL (MAX 5 MIN)</h3>
-                    <p class="form-tip">State your name, origin, and why you're FSP material.</p>
-                    <input type="file" class="video-input" required>
-
-                    <button type="submit" class="final-btn">INITIALIZE PROFILE</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="fsp-footer">
-        <img src="VEXILLIALSDP_FSP.png" alt="FSP Logo" class="footer-logo">
-        <p>REGISTERED SECURE PRODUCTION | &copy; 2026 FILTHY SEDUCTION PRODUCTIONS</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 VestoPresto Media. All Rights Reserved.</p>
+    <p>18 U.S.C. § 2257 Record-Keeping Compliance Statement: Custodian of Records located at [Your Physical Address].</p>
+    <p>This platform is exclusively for adult film performers. 21+ ONLY.</p>
+</footer>
 
 </body>
 </html>
