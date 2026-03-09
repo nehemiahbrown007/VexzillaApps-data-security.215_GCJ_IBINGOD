@@ -3,183 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vestopresto.com | The Adult Industry Casting Couch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>ARTWALL HOLDINGS CO. | NMMMB Sovereign Canvas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;500&display=swap');
+
         :root {
-            --rose-gold: #b76e79;
-            --midnight: #0a0a0a;
-            --white: #ffffff;
-            --gold-accent: #d4af37;
+            --sovereign-gold: #D4AF37;
+            --ominous-black: #080808;
+            --acrylic-texture: url('https://www.transparenttextures.com/patterns/black-linen.png');
         }
 
         body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--midnight);
-            color: var(--white);
+            background-color: var(--ominous-black);
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            background-image: var(--acrylic-texture);
         }
 
-        /* 2026 Age Gate Overlay */
-        #age-gate {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--midnight);
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        h1, h2, .gold-text {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--sovereign-gold);
         }
 
-        .age-box {
-            border: 1px solid var(--rose-gold);
-            padding: 50px;
-            border-radius: 15px;
+        .canvas-glow {
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+            transition: all 0.5s ease;
         }
 
-        header {
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 10, 0.9);
-            border-bottom: 1px solid #333;
+        .canvas-glow:hover {
+            box-shadow: 0 0 80px rgba(212, 175, 55, 0.4);
+            transform: scale(1.02);
         }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: var(--rose-gold);
-            text-transform: lowercase;
-            letter-spacing: 1px;
+        .glass-nav {
+            background: rgba(8, 8, 8, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
-        .hero {
-            padding: 120px 50px;
-            text-align: center;
-            background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=2070') center/cover;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .hero span { color: var(--gold-accent); }
-
-        .form-section {
-            padding: 80px 50px;
-            background: #111;
-            display: flex;
-            justify-content: center;
-        }
-
-        .onboarding-form {
-            background: var(--midnight);
-            padding: 40px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 600px;
-            border: 1px solid #222;
-        }
-
-        .onboarding-form h2 { color: var(--rose-gold); text-align: center; }
-
-        input, select {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            background: #1a1a1a;
+        .tier-card {
+            background: rgba(20, 20, 20, 0.8);
             border: 1px solid #333;
-            color: white;
-            border-radius: 5px;
+            transition: border 0.3s ease;
         }
 
-        .cta-btn {
-            background: var(--rose-gold);
-            color: white;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 1.1rem;
-            margin-top: 20px;
+        .tier-card:hover {
+            border-color: var(--sovereign-gold);
         }
 
-        .cta-btn:hover { background: var(--gold-accent); color: black; }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #666;
-            border-top: 1px solid #222;
-        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #080808; }
+        ::-webkit-scrollbar-thumb { background: var(--sovereign-gold); }
     </style>
 </head>
 <body>
 
-<div id="age-gate">
-    <div class="age-box">
-        <h1 style="color:var(--rose-gold)">vestopresto.com</h1>
-        <p>ADULT ENTERTAINMENT INDUSTRY ONLY</p>
-        <p>You must be 21+ to enter the Casting Command Center.</p>
-        <button class="cta-btn" onclick="document.getElementById('age-gate').style.display='none'">I AM 21+ AND AGREE</button>
-        <p style="margin-top:20px; font-size:0.7rem;">By entering, you agree to our 2257 Compliance terms.</p>
-    </div>
-</div>
-
-<header>
-    <div class="logo">vestopresto.com</div>
-    <nav style="font-size:0.9rem; font-weight:bold;">
-        <span style="margin-left:20px;">CASTING</span>
-        <span style="margin-left:20px;">COMP CARDS</span>
-        <span style="margin-left:20px; color:var(--gold-accent);">TIER 4 ELITE</span>
+    <nav class="fixed w-full z-50 p-6 glass-nav flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">ARTWALL <span class="text-xs align-top">©</span></div>
+        <div class="space-x-8 text-xs uppercase tracking-widest hidden md:flex">
+            <a href="#originals" class="hover:text-yellow-500 transition">Master Originals</a>
+            <a href="#membership" class="hover:text-yellow-500 transition">The Tiers</a>
+            <a href="#community" class="hover:text-yellow-500 transition">Non-Profit Impact</a>
+            <button class="border border-yellow-600 px-4 py-1 text-yellow-600 hover:bg-yellow-600 hover:text-black transition">Join Artwall</button>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <h1>The <span>Casting Couch</span> Reimagined.</h1>
-    <p>Providing the tools, direction, and placement to make you the next big thing.</p>
-</section>
-
-<section class="form-section">
-    <div class="onboarding-form">
-        <h2>Tier 1: Talent Onboarding</h2>
-        <p style="text-align:center; font-size:0.9rem; margin-bottom:30px;">Identity Verification & Career Readiness Starts Here.</p>
+    <section class="h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <div id="vexilla-bg" class="w-full h-full bg-gradient-to-b from-transparent to-black"></div>
+        </div>
         
-        <form id="talentForm">
-            <input type="text" placeholder="Legal Name (for 2257 Records)" required>
-            <input type="email" placeholder="Email (Talent Account Login)" required>
-            
-            <select required>
-                <option value="">Select Gender Category</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="non-binary">All Genders / Non-Binary</option>
-            </select>
+        <div class="z-10">
+            <h1 class="text-5xl md:text-8xl mb-4 animate-pulse">NMMMB</h1>
+            <p class="text-lg md:text-2xl font-light tracking-widest text-gray-400">SOVEREIGN CANVAS. INDUSTRIAL ECHO.</p>
+            <div class="mt-8 h-1 w-24 bg-yellow-600 mx-auto"></div>
+        </div>
+    </section>
 
-            <input type="text" placeholder="Interested In: (Casting, Comp Cards, Direction)" required>
-            
-            <p style="font-size:0.7rem; color:#888; margin-top:20px;">
-                *By submitting, you agree to identity verification via government-issued ID as per Federal 2257 Record-Keeping requirements.
-            </p>
+    <section id="originals" class="py-24 px-8 bg-black">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl mb-12">The Master Originals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="canvas-glow bg-gray-900 aspect-[3/4] relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800" alt="Sovereign Canvas" class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700">
+                    <div class="absolute bottom-4 left-4 text-xs tracking-widest uppercase bg-black p-2">Sovereign No. 1 - Acrylic on Canvas</div>
+                </div>
+                <div>
+                    <p class="text-gray-400 leading-relaxed text-xl italic">
+                        "Each stroke is a legal tender of the soul. We do not just paint; we mint physical reality onto large-format acrylic structures."
+                    </p>
+                    <button class="mt-8 text-yellow-600 border-b border-yellow-600 pb-2 hover:text-white hover:border-white transition">View Private Collection</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit" class="cta-btn">GET STARTED AS A PERFORMER</button>
-        </form>
-    </div>
-</section>
+    <section id="membership" class="py-24 px-8 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl mb-16">The Membership Engine</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                
+                <div class="tier-card p-8 flex flex-col">
+                    <h3 class="gold-text mb-4">Basic</h3>
+                    <p class="text-3xl font-bold mb-6">$0 <span class="text-xs text-gray-500">/mo</span></p>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
+                        <li>✓ Follow Events</li>
+                        <li>✓ Early Access Tickets</li>
+                        <li>✓ Monthly Newsletter</li>
+                        <li>✓ Upload 1 Image to "The Wall"</li>
+                    </ul>
+                    <button class="w-full py-3 bg-white text-black text-xs font-bold uppercase tracking-widest">Register</button>
+                </div>
 
-<footer>
-    <p>&copy; 2026 VestoPresto Media. All Rights Reserved.</p>
-    <p>18 U.S.C. § 2257 Record-Keeping Compliance Statement: Custodian of Records located at [Your Physical Address].</p>
-    <p>This platform is exclusively for adult film performers. 21+ ONLY.</p>
-</footer>
+                <div class="tier-card p-8 border-yellow-900 flex flex-col">
+                    <h3 class="gold-text mb-4">Collector</h3>
+                    <p class="text-3xl font-bold mb-6">$25 <span class="text-xs text-gray-500">/mo</span></p>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
+                        <li>✓ All Basic Perks</li>
+                        <li>✓ 10% Off Artificial Frames</li>
+                        <li>✓ Comp Card Generator</li>
+                        <li>✓ Priority Artwall Placement</li>
+                    </ul>
+                    <button class="w-full py-3 bg-yellow-600 text-black text-xs font-bold uppercase tracking-widest">Join</button>
+                </div>
 
+                <div class="tier-card p-8 border-white flex flex-col">
+                    <h3 class="gold-text mb-4">Sovereign</h3>
+                    <p class="text-3xl font-bold mb-6">$99 <span class="text-xs text-gray-500">/mo</span></p>
+                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
+                        <li>✓ All Collector Perks</li>
+                        <li>✓ Digital Twin (NFT) Minting</li>
+                        <li>✓ Quarterly Studio Visit</li>
+                        <li>✓ Interest Tracking Tool</li>
+                    </ul>
+                    <button class="w-full py-3 bg-white text-black text-xs font-bold uppercase tracking-widest text-blue-900">Upgrade</button>
+                </div>
+
+                <div class="tier-card p-8 bg-yellow-600 flex flex-col">
+                    <h3 class="text-black font-bold mb-4 uppercase">Institution</h3>
+                    <p class="text-4xl text-black font-bold mb-6">Custom</p>
+                    <ul class="text-sm text-black space-y-4 mb-8 text-left flex-grow font-medium">
+                        <li>✓ Dedicated Portfolio Proposals</li>
+                        <li>✓ White-Glove Logistics</li>
+                        <li>✓ Impact Statement Data</li>
+                        <li>✓ Multi-Model Casting Access</li>
+                    </ul>
+                    <button class="w-full py-3 bg-black text-white text-xs font-bold uppercase tracking-widest">Inquire</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-24 px-8 border-t border-gray-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="mb-8">THE ARTWALL <span class="text-sm font-light italic">™</span></h2>
+            <p class="text-gray-500 mb-12 uppercase tracking-widest">A Digital Archive of Public Narrative</p>
+            <div class="p-12 border-2 border-dashed border-yellow-900 hover:border-yellow-600 transition group">
+                <p class="group-hover:text-yellow-500 transition">Drop your vision here. Anchor it to the Artwall.</p>
+                <input type="file" class="hidden" id="art-upload">
+                <label for="art-upload" class="mt-4 inline-block cursor-pointer bg-yellow-900 px-6 py-2 text-xs">UPLOAD IMAGE</label>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-12 text-center text-[10px] text-gray-600 uppercase tracking-widest">
+        <p>© 2026 ARTWALL HOLDINGS CO. | A SOLOMON KIN RECORDS LLC SUBSIDIARY</p>
+        <p class="mt-4">Supporter of AEAH & Koinonia Grace Foundation</p>
+    </footer>
+
+    <script>
+        // Smooth Entrance Animation
+        gsap.from(".animate-pulse", { duration: 2, opacity: 0, y: 50, ease: "power4.out" });
+    </script>
 </body>
 </html>
