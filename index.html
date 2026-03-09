@@ -3,184 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTWALL HOLDINGS CO. | NMMMB Sovereign Canvas</title>
+    <title>ARTWALL HOLDINGS CO. | Proprietary NMMB Rituals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
         :root {
             --sovereign-gold: #D4AF37;
-            --ominous-black: #080808;
+            --ominous-black: #050505;
             --acrylic-texture: url('https://www.transparenttextures.com/patterns/black-linen.png');
         }
 
         body {
             background-color: var(--ominous-black);
-            color: white;
+            color: #e0e0e0;
             font-family: 'Space Grotesk', sans-serif;
             overflow-x: hidden;
             background-image: var(--acrylic-texture);
         }
 
-        h1, h2, .gold-text {
+        h1, h2, h3, .gold-text {
             font-family: 'Syncopate', sans-serif;
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             color: var(--sovereign-gold);
         }
 
-        .canvas-glow {
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
-            transition: all 0.5s ease;
-        }
-
-        .canvas-glow:hover {
-            box-shadow: 0 0 80px rgba(212, 175, 55, 0.4);
-            transform: scale(1.02);
-        }
+        .header-height { height: 80px; }
 
         .glass-nav {
-            background: rgba(8, 8, 8, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
 
         .tier-card {
-            background: rgba(20, 20, 20, 0.8);
-            border: 1px solid #333;
-            transition: border 0.3s ease;
+            background: rgba(12, 12, 12, 1);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tier-card:hover {
             border-color: var(--sovereign-gold);
+            transform: translateY(-5px);
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #080808; }
+        .monolith-glow {
+            border: 1px solid var(--sovereign-gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.05);
+        }
+
+        footer a {
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--sovereign-gold);
+        }
+
+        ::selection { background: var(--sovereign-gold); color: black; }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: var(--sovereign-gold); }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 p-6 glass-nav flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tighter">ARTWALL <span class="text-xs align-top">©</span></div>
-        <div class="space-x-8 text-xs uppercase tracking-widest hidden md:flex">
-            <a href="#originals" class="hover:text-yellow-500 transition">Master Originals</a>
+    <nav class="fixed w-full z-50 glass-nav header-height flex items-center px-8 md:px-12 justify-between">
+        <div class="flex items-center">
+            <img src="ARTWALL HOLDINGS CO.png" alt="ARTWALL HOLDINGS CO." class="h-12 w-auto object-contain">
+        </div>
+        
+        <div class="hidden lg:flex space-x-10 text-[10px] uppercase tracking-[0.4em] font-bold">
+            <a href="#process" class="hover:text-yellow-500 transition">Methodology</a>
             <a href="#membership" class="hover:text-yellow-500 transition">The Tiers</a>
-            <a href="#community" class="hover:text-yellow-500 transition">Non-Profit Impact</a>
-            <button class="border border-yellow-600 px-4 py-1 text-yellow-600 hover:bg-yellow-600 hover:text-black transition">Join Artwall</button>
+            <a href="#ritual" class="hover:text-yellow-500 transition">Ritual Origin</a>
+            <a href="#contact" class="hover:text-yellow-500 transition">Acquisition</a>
+        </div>
+
+        <div class="flex items-center">
+            <button class="border border-yellow-600/50 px-5 py-2 text-[9px] uppercase tracking-widest text-yellow-600 hover:bg-yellow-600 hover:text-black transition duration-500">
+                Portal Login
+            </button>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center p-4 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-30">
-            <div id="vexilla-bg" class="w-full h-full bg-gradient-to-b from-transparent to-black"></div>
-        </div>
-        
-        <div class="z-10">
-            <h1 class="text-5xl md:text-8xl mb-4 animate-pulse">NMMMB</h1>
-            <p class="text-lg md:text-2xl font-light tracking-widest text-gray-400">SOVEREIGN CANVAS. INDUSTRIAL ECHO.</p>
-            <div class="mt-8 h-1 w-24 bg-yellow-600 mx-auto"></div>
+    <section class="h-screen flex flex-col justify-center items-center text-center p-4 relative pt-20">
+        <div class="z-10 max-w-5xl">
+            <p class="text-[10px] tracking-[1.2em] mb-8 text-gray-500 font-light">ESTABLISHED 2026 | THE ART WALL</p>
+            <h1 class="text-5xl md:text-8xl mb-6 font-bold leading-none tracking-tighter text-white">NMMB</h1>
+            <h2 class="text-xs md:text-lg tracking-[0.6em] text-yellow-600/80 mb-12">THE PROPRIETARY RITUAL PROCESS</h2>
+            <div class="mt-8 h-[1px] w-32 bg-yellow-600 mx-auto opacity-30"></div>
         </div>
     </section>
 
-    <section id="originals" class="py-24 px-8 bg-black">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl mb-12">The Master Originals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="canvas-glow bg-gray-900 aspect-[3/4] relative overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=800" alt="Sovereign Canvas" class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-700">
-                    <div class="absolute bottom-4 left-4 text-xs tracking-widest uppercase bg-black p-2">Sovereign No. 1 - Acrylic on Canvas</div>
-                </div>
-                <div>
-                    <p class="text-gray-400 leading-relaxed text-xl italic">
-                        "Each stroke is a legal tender of the soul. We do not just paint; we mint physical reality onto large-format acrylic structures."
-                    </p>
-                    <button class="mt-8 text-yellow-600 border-b border-yellow-600 pb-2 hover:text-white hover:border-white transition">View Private Collection</button>
-                </div>
+    <section id="membership" class="py-32 px-8 md:px-12 bg-[#050505]">
+        <div class="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="tier-card p-10 flex flex-col">
+                <h3 class="gold-text text-[10px] mb-8">The Insider</h3>
+                <p class="text-xs text-gray-500 mb-8 tracking-widest uppercase">Intellectual Access</p>
+                <ul class="text-[9px] text-gray-400 space-y-6 mb-12 text-left flex-grow uppercase tracking-widest">
+                    <li>✓ Frequency Reports</li>
+                    <li>✓ Pop-up Gallery Alerts</li>
+                    <li>✓ Artist Performance Dates</li>
+                </ul>
+                <button class="w-full py-4 border border-white/5 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition font-bold">Register</button>
+            </div>
+
+            <div class="tier-card p-10 flex flex-col border-yellow-900/20">
+                <h3 class="gold-text text-[10px] mb-8">The Collector</h3>
+                <p class="text-2xl font-light mb-2">$150,000</p>
+                <p class="text-[9px] text-gray-500 mb-8 tracking-widest uppercase italic">The Collector's Class</p>
+                <ul class="text-[9px] text-gray-400 space-y-6 mb-12 text-left flex-grow uppercase tracking-widest">
+                    <li class="text-yellow-600">✓ 15 Proprietary Paintings / Yr</li>
+                    <li>✓ Tiered Class Markings</li>
+                    <li>✓ Historical Timeline Entry</li>
+                </ul>
+                <button class="w-full py-4 bg-yellow-600 text-black text-[9px] uppercase tracking-[0.2em] font-bold">Acquire</button>
+            </div>
+
+            <div class="tier-card p-10 flex flex-col">
+                <h3 class="gold-text text-[10px] mb-8">Sovereign</h3>
+                <p class="text-xs text-gray-500 mb-8 tracking-widest uppercase italic">Estate Curation</p>
+                <ul class="text-[9px] text-gray-400 space-y-6 mb-12 text-left flex-grow uppercase tracking-widest">
+                    <li class="text-yellow-600">✓ 21 Proprietary Paintings / Yr</li>
+                    <li>✓ Art Club Network Access</li>
+                    <li>✓ Multi-Property Curation</li>
+                </ul>
+                <button class="w-full py-4 border border-white/10 text-[9px] uppercase tracking-[0.2em] hover:bg-white hover:text-black transition font-bold">Inquire</button>
+            </div>
+
+            <div class="tier-card p-10 monolith-glow bg-gradient-to-b from-[#0a0a0a] to-[#050505] flex flex-col">
+                <h3 class="gold-text text-[10px] mb-8">The Monolith</h3>
+                <p class="text-2xl font-light mb-2">$2,000,000</p>
+                <p class="text-[9px] text-yellow-600 mb-8 tracking-widest uppercase font-bold">The Ritual Class</p>
+                <ul class="text-[9px] text-white space-y-6 mb-12 text-left flex-grow uppercase tracking-widest">
+                    <li class="text-yellow-500">✓ 27 Ritual Relics / Yr</li>
+                    <li class="italic">✓ Proprietary Pilgrimage</li>
+                    <li class="italic">✓ The Living Archive (Dossier)</li>
+                    <li class="italic">✓ IBINGOD™ Ritual Method</li>
+                </ul>
+                <button class="w-full py-4 bg-white text-black text-[9px] uppercase tracking-[0.2em] font-bold">Submit Application</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-yellow-900/10 py-20 px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1 md:col-span-2">
+                <img src="ARTWALL HOLDINGS CO.png" alt="ARTWALL HOLDINGS CO." class="h-10 w-auto mb-6 grayscale opacity-80">
+                <p class="text-[10px] text-gray-500 tracking-widest max-w-sm leading-relaxed uppercase">
+                    A global initiative by NMMB. Leveraging the creative madness of the unorthodox through ritualistic mastery.
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h4 class="text-white text-[10px] uppercase tracking-[0.3em] font-bold mb-2">Organization</h4>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest">The Archive</a>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest">Non-Profit Impact</a>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest">Proprietary Legal</a>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h4 class="text-white text-[10px] uppercase tracking-[0.3em] font-bold mb-2">Privileged</h4>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest italic">Monolith Portal</a>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest">Sovereign Registry</a>
+                <a href="#" class="text-[10px] text-gray-600 uppercase tracking-widest">Contact Concierge</a>
             </div>
         </div>
-    </section>
 
-    <section id="membership" class="py-24 px-8 bg-[#0a0a0a]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl mb-16">The Membership Engine</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                
-                <div class="tier-card p-8 flex flex-col">
-                    <h3 class="gold-text mb-4">Basic</h3>
-                    <p class="text-3xl font-bold mb-6">$0 <span class="text-xs text-gray-500">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
-                        <li>✓ Follow Events</li>
-                        <li>✓ Early Access Tickets</li>
-                        <li>✓ Monthly Newsletter</li>
-                        <li>✓ Upload 1 Image to "The Wall"</li>
-                    </ul>
-                    <button class="w-full py-3 bg-white text-black text-xs font-bold uppercase tracking-widest">Register</button>
-                </div>
-
-                <div class="tier-card p-8 border-yellow-900 flex flex-col">
-                    <h3 class="gold-text mb-4">Collector</h3>
-                    <p class="text-3xl font-bold mb-6">$25 <span class="text-xs text-gray-500">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
-                        <li>✓ All Basic Perks</li>
-                        <li>✓ 10% Off Artificial Frames</li>
-                        <li>✓ Comp Card Generator</li>
-                        <li>✓ Priority Artwall Placement</li>
-                    </ul>
-                    <button class="w-full py-3 bg-yellow-600 text-black text-xs font-bold uppercase tracking-widest">Join</button>
-                </div>
-
-                <div class="tier-card p-8 border-white flex flex-col">
-                    <h3 class="gold-text mb-4">Sovereign</h3>
-                    <p class="text-3xl font-bold mb-6">$99 <span class="text-xs text-gray-500">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-4 mb-8 text-left flex-grow">
-                        <li>✓ All Collector Perks</li>
-                        <li>✓ Digital Twin (NFT) Minting</li>
-                        <li>✓ Quarterly Studio Visit</li>
-                        <li>✓ Interest Tracking Tool</li>
-                    </ul>
-                    <button class="w-full py-3 bg-white text-black text-xs font-bold uppercase tracking-widest text-blue-900">Upgrade</button>
-                </div>
-
-                <div class="tier-card p-8 bg-yellow-600 flex flex-col">
-                    <h3 class="text-black font-bold mb-4 uppercase">Institution</h3>
-                    <p class="text-4xl text-black font-bold mb-6">Custom</p>
-                    <ul class="text-sm text-black space-y-4 mb-8 text-left flex-grow font-medium">
-                        <li>✓ Dedicated Portfolio Proposals</li>
-                        <li>✓ White-Glove Logistics</li>
-                        <li>✓ Impact Statement Data</li>
-                        <li>✓ Multi-Model Casting Access</li>
-                    </ul>
-                    <button class="w-full py-3 bg-black text-white text-xs font-bold uppercase tracking-widest">Inquire</button>
-                </div>
-
-            </div>
+        <div class="text-center pt-10 border-t border-gray-900">
+            <p class="text-[9px] text-gray-700 uppercase tracking-[0.5em]">
+                © 2026 ARTWALL HOLDINGS CO. | A SOLOMON KIN RECORDS LLC SUBSIDIARY
+            </p>
+            <p class="mt-4 text-[8px] text-gray-800 uppercase tracking-widest">
+                METHODS COPYRIGHTED BY IBINGOD™ | SUPPORTER OF AEAH & KOINONIA GRACE FOUNDATION
+            </p>
         </div>
-    </section>
-
-    <section id="community" class="py-24 px-8 border-t border-gray-900">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="mb-8">THE ARTWALL <span class="text-sm font-light italic">™</span></h2>
-            <p class="text-gray-500 mb-12 uppercase tracking-widest">A Digital Archive of Public Narrative</p>
-            <div class="p-12 border-2 border-dashed border-yellow-900 hover:border-yellow-600 transition group">
-                <p class="group-hover:text-yellow-500 transition">Drop your vision here. Anchor it to the Artwall.</p>
-                <input type="file" class="hidden" id="art-upload">
-                <label for="art-upload" class="mt-4 inline-block cursor-pointer bg-yellow-900 px-6 py-2 text-xs">UPLOAD IMAGE</label>
-            </div>
-        </div>
-    </section>
-
-    <footer class="p-12 text-center text-[10px] text-gray-600 uppercase tracking-widest">
-        <p>© 2026 ARTWALL HOLDINGS CO. | A SOLOMON KIN RECORDS LLC SUBSIDIARY</p>
-        <p class="mt-4">Supporter of AEAH & Koinonia Grace Foundation</p>
     </footer>
 
     <script>
-        // Smooth Entrance Animation
-        gsap.from(".animate-pulse", { duration: 2, opacity: 0, y: 50, ease: "power4.out" });
+        gsap.from("nav", { duration: 1.5, y: -100, opacity: 0, ease: "power4.out" });
+        gsap.from("h1", { duration: 2, scale: 0.9, opacity: 0, ease: "power2.out", delay: 0.3 });
     </script>
 </body>
 </html>
